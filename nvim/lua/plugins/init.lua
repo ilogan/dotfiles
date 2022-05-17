@@ -55,6 +55,10 @@ return packer.startup(function(use)
   -- Snippets
 
   -- Git
+  use {
+    "lewis6991/gitsigns.nvim",
+    config = require "plugins.configs.gitsigns"
+  }
 
   -- Markdown
 
