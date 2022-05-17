@@ -29,6 +29,7 @@ return packer.startup(function(use)
 
   -- UI
   use { "kyazdani42/nvim-web-devicons", config = require "plugins.configs.icons" }
+  use { "folke/which-key.nvim" }
 
   -- Syntax
   --use {
