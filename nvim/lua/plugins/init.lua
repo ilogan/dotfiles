@@ -30,7 +30,11 @@ return packer.startup(function(use)
   -- UI
   use { "kyazdani42/nvim-web-devicons", config = require "plugins.configs.icons" }
   use { "folke/which-key.nvim" }
-
+  use {
+    "nvim-lualine/lualine.nvim",
+    config = require "plugins.configs.lualine",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true },
+  }
   -- Syntax
   --use {
   --  "nvim-treesitter/nvim-treesitter",
