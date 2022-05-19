@@ -39,7 +39,7 @@ local options = {
     pumheight = 10,
     laststatus = 3,
     updatetime = 250,
---    background = "dark",
+    background = "dark",
 }
 
 vim.opt.shortmess:append "c"

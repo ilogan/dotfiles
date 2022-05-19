@@ -33,63 +33,72 @@ _M.colors = {
 }
 
 _M.init = function()
-    local isExistNord, onenord = pcall(require, "onenord")
-    if isExistNord then
-        onenord.setup {
-            borders = true,
-            fade_nc = false,
+    local isExistCatppuccin, catppuccin = pcall(require, "catppuccin")
+    if isExistCatppuccin then
+        catppuccin.setup {
+            transparent_background = true,
+            term_colors = true,
             styles = {
-                comments = "italic",
-                strings = "NONE",
-                keywords = "NONE",
-                functions = "italic",
-                variables = "bold",
-                diagnostics = "underline",
+	              comments = "italic",
+	              functions = "italic",
+	              keywords = "italic",
+              	strings = "NONE",
+              	variables = "italic",
             },
-            disable = {
-                background = false,
-                cursorline = false,
-                eob_lines = true,
-            },
-            custom_highlights = {
-                VertSplit = { fg = _M.colors.grey14 },
-                BufferLineIndicatorSelected = { fg = _M.colors.cyan, bg = _M.colors.bg },
-                BufferLineFill = { fg = _M.colors.fg, bg = _M.colors.grey14 },
-                NvimTreeNormal = { fg = _M.colors.grey5, bg = _M.colors.grey14 },
-                WhichKeyFloat = { bg = _M.colors.grey14 },
-                GitSignsAdd = { fg = _M.colors.green },
-                GitSignsChange = { fg = _M.colors.orange },
-                GitSignsDelete = { fg = _M.colors.red },
-                NvimTreeFolderIcon = { fg = _M.colors.grey9 },
-                NvimTreeIndentMarker = { fg = _M.colors.grey12 },
-
-                NormalFloat = { bg = _M.colors.grey14 },
-                FloatBorder = { bg = _M.colors.grey14, fg = _M.colors.grey14 },
-
-                TelescopePromptPrefix = { bg = _M.colors.grey14 },
-                TelescopePromptNormal = { bg = _M.colors.grey14 },
-                TelescopeResultsNormal = { bg = _M.colors.grey15 },
-                TelescopePreviewNormal = { bg = _M.colors.grey16 },
-
-                TelescopePromptBorder = { bg = _M.colors.grey14, fg = _M.colors.grey14 },
-                TelescopeResultsBorder = { bg = _M.colors.grey15, fg = _M.colors.grey15 },
-                TelescopePreviewBorder = { bg = _M.colors.grey16, fg = _M.colors.grey16 },
-
-                TelescopePromptTitle = { fg = _M.colors.grey14 },
-                TelescopeResultsTitle = { fg = _M.colors.grey15 },
-                TelescopePreviewTitle = { fg = _M.colors.grey16 },
-
-                PmenuSel = { bg = _M.colors.grey12 },
-                Pmenu = { bg = _M.colors.grey14 },
-                PMenuThumb = { bg = _M.colors.grey16 },
-
-                LspFloatWinNormal = { fg = _M.colors.fg, bg = _M.colors.grey14 },
-                LspFloatWinBorder = { fg = _M.colors.grey14 },
-
-                IndentBlanklineChar = { fg = _M.colors.grey12, style = "nocombine" },
-                IndentBlanklineContextChar = { fg = _M.colors.magenta, style = "nocombine" },
+            integrations = {
+                treesitter = true,
+                native_lsp = {
+            		    enabled = true,
+	            	    virtual_text = {
+		              	    errors = "italic",
+		              	    hints = "italic",
+		              	    warnings = "italic",
+		              	    information = "italic",
+	          	      },
+	          	      underlines = {
+			                  errors = "underline",
+			                  hints = "underline",
+			                  warnings = "underline",
+			                  information = "underline",
+	                	},
+	              },
+	              lsp_trouble = false,
+	              cmp = true,
+	              lsp_saga = false,
+	              gitgutter = false,
+            	  gitsigns = true,
+              	telescope = true,
+            	  nvimtree = {
+	                	enabled = true,
+	              	  show_root = false,
+	              	  transparent_panel = true,
+            	  },
+            	  neotree = {
+	                	enabled = false,
+	              	  show_root = false,
+	              	  transparent_panel = false,
+            	  },
+	              which_key = false,
+	              indent_blankline = {
+	            	    enabled = true,
+	            	    colored_indent_levels = false,
+          	    },
+          	    dashboard = true,
+          	    neogit = false,
+          	    vim_sneak = false,
+          	    fern = false,
+          	    barbar = false,
+          	    bufferline = true,
+          	    markdown = true,
+          	    lightspeed = false,
+          	    ts_rainbow = false,
+          	    hop = false,
+          	    notify = true,
+          	    telekasten = true,
+          	    symbols_outline = true,         
             },
         }
+    vim.cmd[[colorscheme catppuccin]]
     end
 end
 
