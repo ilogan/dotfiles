@@ -35,6 +35,8 @@ return packer.startup(function(use)
     config = require "plugins.configs.lualine",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
   }
+  use { "norcalli/nvim-colorizer.lua", config = require "plugins.configs.colorizer" }
+
   -- Syntax
   --use {
   --  "nvim-treesitter/nvim-treesitter",
