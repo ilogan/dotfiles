@@ -50,4 +50,4 @@ end
 
 --utils.setSpacesSize { go = 4, python = 4, rust = 4, cpp = 4, c = 4, js = 2 }
 
--- theme.init()
+theme.init()

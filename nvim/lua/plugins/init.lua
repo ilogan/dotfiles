@@ -28,6 +28,7 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- UI
+  use { "rmehri01/onenord.nvim" }
   use { "kyazdani42/nvim-web-devicons", config = require "plugins.configs.icons" }
   use { "folke/which-key.nvim" }
   use {
