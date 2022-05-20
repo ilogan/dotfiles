@@ -85,7 +85,7 @@ web_devicons.setup {
         },
         py = {
             icon = "",
-            color = colors.orange,
+            color = colors.yellow,
             name = "py",
         },
         toml = {
