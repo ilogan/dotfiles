@@ -2,15 +2,15 @@
 # include ./theme.conf
 
 # Fonts
-font_family           JetBrains Mono Medium
-italic_font           JetBrains Mono Italic
-bold_font             JetBrains Moo Bold
-bold_italic_font      JetBrains Mono Bold Italic
+font_family           JetBrainsMono Nerd Font Bold
+italic_font           JetBrainsMono Nerd Font Bold Italic
+bold_font             JetBrainsMono Nerd Font Extra Bold
+bold_italic_font      JetBrainsMono Nerd Font Extra Bold Italic
 font_size             10
 background_opacity    0.95
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin
+# Bright Lights
 include current-theme.conf
 # END_KITTY_THEME
