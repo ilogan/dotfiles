@@ -3,14 +3,15 @@ local _M = {}
 _M.colors = {
     bg = "#191919",
     fg = "#b2c8d6",
-    red = "#ff355b",
-    orange = "#f34a00",
+    red = "#e3647b",
+    orange = "#eba36c",
     yellow = "#ffc150",
-    blue = "#75d3ff",
-    green = "#b6e875",
+    blue = "#7ba4e0",
+    oldBlue = "#75d3ff",
+    green = "#91cc8d",
     cyan = "#6cbeb5",
-    magenta = "#b975e6",
-    pink = "#FFA19F",
+    magenta = "#ce97db",
+    pink = "#e3a8d4",
     grey1 = "#f8fafc",
     grey2 = "#f0f1f4",
     grey3 = "#eaecf0",
@@ -98,6 +99,16 @@ _M.init = function()
           	    symbols_outline = true,         
             },
         }
+    -- this is a comment!
+    catppuccin.remap({
+      CommentTitle = { fg = _M.colors.green },
+      Function = { fg = _M.colors.orange },
+      String = { fg = _M.colors.oldBlue },
+      Keyword = { fg = _M.colors.blue },
+      Identifier = { fg = _M.colors.orange },
+      Conditional = { fg = _M.colors.red },
+      Special = { fg = _M.colors.magenta },
+    })
     vim.cmd[[colorscheme catppuccin]]
     end
 end
