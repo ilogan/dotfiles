@@ -55,6 +55,14 @@ return packer.startup(function(use)
     },
     config = require "plugins.configs.nvimtree"
   }
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = require "plugins.configs.telescope",
+  }
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   -- LSP
 
