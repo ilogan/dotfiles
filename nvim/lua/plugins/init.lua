@@ -69,6 +69,10 @@ return packer.startup(function(use)
     config = require "plugins.configs.telescope",
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use {
+    "akinsho/toggleterm.nvim",
+    config = require "plugins.configs.toggleterm"
+  }
 
   -- LSP
   --use { "neovim/nvim-lspconfig" }
