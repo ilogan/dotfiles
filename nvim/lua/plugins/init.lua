@@ -73,11 +73,22 @@ return packer.startup(function(use)
   -- LSP
   --use { "neovim/nvim-lspconfig" }
 
-  -- Comment
-
-  -- Completion
+  -- Cmp
+  use {
+    "hrsh7th/nvim-cmp",               -- The completion plugin
+    requires = {
+      "hrsh7th/cmp-buffer",           -- buffer completions
+      "hrsh7th/cmp-path",             -- path completions
+      "hrsh7th/cmp-cmdline",          -- cmdline completions
+      "saadparwaiz1/cmp_luasnip",     -- snippet completions
+      "hrsh7th/cmp-nvim-lsp",
+    },
+    config = require "plugins.configs.cmp"
+  }
 
   -- Snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- Git
   use {
