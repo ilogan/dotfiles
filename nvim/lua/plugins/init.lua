@@ -52,27 +52,26 @@ return packer.startup(function(use)
   -- Syntax
   --use {
   --  "nvim-treesitter/nvim-treesitter",
+  --  run = ":TSUpdate",
   --  config = require "plugins.configs.treesitter",
   --}
 
   -- Utilities
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use {
     "kyazdani42/nvim-tree.lua",
-    requires = {
-      "kyazdani42/nvim-web-devicons",
-    },
+    requires = { "kyazdani42/nvim-web-devicons" },
     config = require "plugins.configs.nvimtree"
   }
   use {
     "nvim-telescope/telescope.nvim",
-    requires = {
-      "nvim-lua/plenary.nvim",
-    },
+    requires = { "nvim-lua/plenary.nvim" },
     config = require "plugins.configs.telescope",
   }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   -- LSP
+  --use { "neovim/nvim-lspconfig" }
 
   -- Comment
 
