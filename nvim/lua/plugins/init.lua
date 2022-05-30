@@ -3,6 +3,14 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
+vim.cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost init.lua source <afile> | PackerSync
+  augroup end
+]]
+
 local ok, packer = pcall(require, "packer")
 
 if not ok then
