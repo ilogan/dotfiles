@@ -84,6 +84,19 @@ M.on_attach = function(client, bufnr)
   if client.name == "tsserver" then
     client.resolved_capabilities.document_formatting = false
   end
+
+  if client.name == "eslint" then
+    client.resolved_capabilities.document_formatting = true
+    local au_lsp = vim.api.nvim_create_augroup("eslint_lsp", { clear = true })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      pattern = "*",
+      callback = function()
+        vim.lsp.buf.formatting_sync()
+      end,
+      group = au_lsp,
+    })
+  end
+
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end
