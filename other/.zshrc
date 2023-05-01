@@ -15,7 +15,7 @@ alias ls="exa --sort type -a"
 alias ll="exa --long --sort type -a"
 alias tree="exa --git -a --tree -s type -I '.git|node_modules'"
 
-TERM=xterm-256color
+TERM=xterm-kitty
 
 # kitty
 alias kd="kitty +kitten diff"
@@ -35,4 +35,4 @@ source /Users/ianlogan/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 typeset -A ZSH_HIGHLIGHT_STYLES
 # ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=160'
-ZSH_HIGHLIGHT_STYLES[arg0]='fg=40'
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=226'

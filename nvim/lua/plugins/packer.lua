@@ -8,10 +8,13 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use {
         "jesseleite/nvim-noirbuddy",
-        requires = { "tjdevries/colorbuddy.nvim", branch = "dev" },
+        requires = { "tjdevries/colorbuddy.nvim" },
         config = function() require('noirbuddy').setup({
+                styles = {
+                    undercurl = true
+                },
                 colors = {
-                    background = '#020202',
+                    background = '#0e0f17',
                     primary = '#949494',
                     secondary = '#b4b4b4',
                     noir_0 = '#ffffff',
@@ -125,5 +128,6 @@ return require('packer').startup(function(use)
     use { "akinsho/toggleterm.nvim" }
     use { "nvim-treesitter/playground" }
     use { 'lewis6991/gitsigns.nvim' }
+    use { 'mechatroner/rainbow_csv' }
 
 end)
