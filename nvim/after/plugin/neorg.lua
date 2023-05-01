@@ -2,14 +2,21 @@ require('neorg').setup {
     load = {
         ["core.defaults"] = {},
         ["core.integrations.telescope"] = {},
-        ["core.norg.completion"] = {
+        ["core.completion"] = {
             config = {
                 engine = "nvim-cmp",
             }
         },
         ["core.integrations.nvim-cmp"] = {},
-        ["core.norg.concealer"] = {},
-        ["core.norg.dirman"] = {
+        ["core.concealer"] = {
+            config = {
+                folds = false,
+                dim_code_blocks = {
+                    conceal = false
+                }
+            }
+        },
+        ["core.dirman"] = {
             config = {
                 workspaces = {
                     work = "~/notes/work",

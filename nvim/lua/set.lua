@@ -36,7 +36,7 @@ vim.opt.cursorlineopt = "number"
 -- global options
 -- vim.opt.writebackup = false
 -- vim.opt.termguicolors = true
--- vim.opt.conceallevel = 2
+vim.opt.conceallevel = 2
 -- vim.opt.ignorecase = true -- search case
 -- vim.opt.smartcase = true -- search matters if capital letter
 -- vim.opt.inccommand = "split" -- "for incsearch while sub
