@@ -1,0 +1,1 @@
+let g:rcsv_colorpairs = [['red', '#E06C75'], ['darkyellow', '#F7B267'], ['yellow', '#F9C48B'], ['darkgreen', '#7DB356'], ['green', '#98C379'], ['blue', '#61AFEF'], ['darkblue', '#7998C3'], ['magenta', '#C678DD'], ['white', 'white'], ['NONE', 'NONE']]
